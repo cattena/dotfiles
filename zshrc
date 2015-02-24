@@ -99,9 +99,9 @@ alias :Q="exit"
 alias :e="vim"
 alias :E="vim"
 alias ..='cd ..'
-alias ...='../..'
-alias ....='../../..'
-alias .....='../../../..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 alias ssh="export TERM='xterm-256color'; ssh"
 alias whosfat="du --max-depth=1 -h | sort --ignore-case --reverse -h | head -10"
 alias ls="ls --color=always" 
