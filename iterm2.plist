@@ -1775,6 +1775,23 @@
 	<string></string>
 	<key>NSScrollAnimationEnabled</key>
 	<false/>
+	<key>NSTableView Columns KeyBingingTable</key>
+	<array>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATCG
+		</data>
+		<string>198</string>
+		<data>
+		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
+		hAErATGG
+		</data>
+		<string>302</string>
+	</array>
+	<key>NSTableView Hidden Columns KeyBingingTable</key>
+	<array/>
+	<key>NSTableView Sort Ordering KeyBingingTable</key>
+	<array/>
 	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
 	<dict>
 		<key>TB Is Shown</key>
@@ -1783,7 +1800,7 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>769 110 445 232 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>270 355 924 485 0 0 1440 877 </string>
+	<string>108 317 924 485 0 0 1440 877 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>448 369 384 129 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
@@ -1838,11 +1855,11 @@
 			<key>Ansi 12 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.77823805809020996</real>
 				<key>Green Component</key>
-				<real>0.58658879995346069</real>
+				<real>0.57162487506866455</real>
 				<key>Red Component</key>
-				<real>0.25301915407180786</real>
+				<real>0.18748980760574341</real>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
@@ -1883,11 +1900,11 @@
 			<key>Ansi 3 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.29084578156471252</real>
+				<real>0.43810334801673889</real>
 				<key>Green Component</key>
-				<real>0.67403388023376465</real>
+				<real>0.76270782947540283</real>
 				<key>Red Component</key>
-				<real>0.72714579105377197</real>
+				<real>0.98483991622924805</real>
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
