@@ -107,6 +107,8 @@ alias whosfat="du --max-depth=1 -h | sort --ignore-case --reverse -h | head -10"
 alias ls="ls --color=always" 
 alias grep="grep --color=always"
 alias egrep="egrep --color=always"
+alias youtube-mp3="youtube-dl -f 140 -ix --audio-format mp3"
+alias octave='/usr/local/octave/3.8.0/bin/octave'
 # ---------------------------------------------------------------------
 # Git
 # ---------------------------------------------------------------------
