@@ -5,8 +5,9 @@
 #     Source: https://github.com/kniren/dotfiles
 #
 # ------------------------------------------------------------------
+
 # ---------------------------------------------------------------------
-# Basic options --¬
+# Basic options
 # ---------------------------------------------------------------------
 
 fpath=(~/.zsh $fpath)
@@ -32,33 +33,9 @@ source ~/.zsh/prompto.theme
 source ~/.zprofile
 eval `dircolors -b ~/.dircolors`
 
-#-¬
 # ---------------------------------------------------------------------
-# Functions --¬
+# Functions
 # ---------------------------------------------------------------------
-
-# Search in wikipedia from the command line
-wiki() { dig +short txt $1.wp.dg.cx; }
-
-# Note taking
-n() { $EDITOR $NOTEDIR/$@; }
-compctl -/ -W $NOTEDIR -f n
-
-nls () { 
-    tree ~/.notes -CR --noreport |
-    sed -e 's/└── /-/' \
-        -e 's/    /-/' \
-        -e 's/├── /-/' \
-        -e 's/│   /-/' |
-    awk 'FS="-" {
-        if (NF==1) print "\033[35mNotes";
-        if (NF>1) {
-            gsub(/-/,"  ");
-            gsub(/.md/,"");
-            print;
-        }
-    }'
-;}
 
 # Color man pages
 man() {
@@ -72,32 +49,19 @@ man() {
     man "$@"
 }
 
-# Use Google's text to speech synthesis to play phrases from the cmd line
-say() { 
-        # limit to 100 character or less
-        # language code: http://developers.google.com/translate/v2/using_rest#language-params
-        # useage: say <language code> <phase>
-        # example: say es come with me
-        # Original file:
-        # https://github.com/gotbletu/shownotes/blob/master/google_text_to_speech.txt
-        mplayer -user-agent Mozilla \
-        "http://translate.google.com/translate_tts?ie=UTF-8&tl="$1"&q=$(echo "$@" \
-        | cut -d ' ' -f2- | sed 's/ /\+/g')" > /dev/null 2>&1 ;}
+# ---------------------------------------------------------------------
+# Aliases
+# ---------------------------------------------------------------------
 
-# -¬
-# ---------------------------------------------------------------------
-# Aliases --¬
-# ---------------------------------------------------------------------
 # General purpose
-# ---------------------------------------------------------------------
-alias tmux="TERM=xterm-256color tmux"
+#alias tmux="TERM=xterm-256color tmux"
 alias z="zathura"
 alias clc="clear"
 alias copy="rsync -aP"
 alias :q="exit"
 alias :Q="exit"
-alias :e="vim"
-alias :E="vim"
+alias :e="nvim"
+alias :E="nvim"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -109,9 +73,10 @@ alias grep="grep --color=always"
 alias egrep="egrep --color=always"
 alias youtube-mp3="youtube-dl -f 140 -ix --audio-format mp3"
 alias octave='/usr/local/octave/3.8.0/bin/octave'
-# ---------------------------------------------------------------------
+alias mame="cd ~/Games/mame0181-64bit/ && ./mame64"
+alias vim='nvim'
+
 # Git
-# ---------------------------------------------------------------------
 alias g='git'
 compdef g=git
 alias gb='git branch'
@@ -127,5 +92,3 @@ alias gco='git checkout'
 compdef _git gco=git-checkout
 alias gc='git commit -a -m'
 alias grt='cd $(git rev-parse --show-toplevel || echo ".")' # Return to root of rep.
-# -¬
-# ---------------------------------------------------------------------
