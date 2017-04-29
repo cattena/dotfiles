@@ -57,7 +57,8 @@ myKeys ::  XConfig l -> M.Map (KeyMask, KeySym) (X ())
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [
     -- Launch applications through dmenu
-      ((modm,xK_r), spawn dmenuCall)
+    ((modm,xK_r), spawn dmenuCall)
+--      ((modm,xK_p), spawn "dmenu_run -i -fn '*-profont-*-*-*-*-12-*-*-*-*-*-*-*' -sb '#435d75' -nb '#000000' -h 20")
     -- Control mpd music through dmenu
     , ((modm,xK_p), spawn "/home/carlos/Scripts/dmpd")
     , ((modShift,xK_p), spawn "/home/carlos/Scripts/dmpd --control")
@@ -91,8 +92,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Application spawning
     , ((modm      , xK_Return) , spawn $ XMonad.terminal conf )
     , ((modm      , xK_i)      , spawn "dwb"                  )
-    , ((modShift  , xK_i)      , spawn "google-chrome-stable" )
-    , ((modShift  , xK_n)      , spawn "nautilus"             )
+    , ((modShift  , xK_i)      , spawn "chromium" )
+    , ((modShift  , xK_n)      , spawn "pcmanfm"             )
     , ((modm      , xK_m)      , spawn "terminator -e ncmpcpp"     )
     , ((modShift  , xK_m)      , spawn "terminator -e mutt"        )
     , ((modShift  , xK_r)      , spawn "killall dzen2; xmonad --recompile; xmonad --restart")
@@ -117,7 +118,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         | (key, sc) <- zip [xK_4, xK_5, xK_6] [0..]
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
     where modShift  = modm .|. shiftMask
-          dmenuCall = "dmenu_run -i -h 20 "
+          dmenuCall = "dmenu_run -i " -- -h 20 "  --'-h' no está disponible en la versión del repo.
                       ++ " -fn 'profont-8' "
                       ++ " -sb '" ++ colLook White 1 ++ "'"
                       ++ " -nb '#000000'"
