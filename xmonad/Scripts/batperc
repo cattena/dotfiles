@@ -26,5 +26,5 @@ fi
 if [[ $STATUS != "Discharging" ]]; then
     ICON="ac.xbm"
 fi
-ICON='^i(/home/alex/.xmonad/dzen/icons/xbm8x8/'"$ICON)"
+ICON='^i(/home/carlos/.xmonad/dzen/icons/xbm8x8/'"$ICON)"
 echo "$ICON $BATBAR"

@@ -59,8 +59,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Launch applications through dmenu
       ((modm,xK_r), spawn dmenuCall)
     -- Control mpd music through dmenu
-    , ((modm,xK_p), spawn "/home/alex/Scripts/dmpd")
-    , ((modShift,xK_p), spawn "/home/alex/Scripts/dmpd --control")
+    , ((modm,xK_p), spawn "/home/carlos/Scripts/dmpd")
+    , ((modShift,xK_p), spawn "/home/carlos/Scripts/dmpd --control")
     -- Close focused window
     , ((modShift,xK_c), kill)
      -- Rotate through the available layout algorithms
@@ -93,13 +93,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm      , xK_i)      , spawn "dwb"                  )
     , ((modShift  , xK_i)      , spawn "google-chrome-stable" )
     , ((modShift  , xK_n)      , spawn "nautilus"             )
-    , ((modm      , xK_m)      , spawn "termite -e ncmpcpp"     )
-    , ((modShift  , xK_m)      , spawn "termite -e mutt"        )
+    , ((modm      , xK_m)      , spawn "terminator -e ncmpcpp"     )
+    , ((modShift  , xK_m)      , spawn "terminator -e mutt"        )
     , ((modShift  , xK_r)      , spawn "killall dzen2; xmonad --recompile; xmonad --restart")
     -- Alsa Multimedia Control
-    , ((0, 0x1008ff11), spawn "/home/alex/.xmonad/Scripts/volctl down"  )
-    , ((0, 0x1008ff13), spawn "/home/alex/.xmonad/Scripts/volctl up"    )
-    , ((0, 0x1008ff12), spawn "/home/alex/.xmonad/Scripts/volctl toggle")
+    , ((0, 0x1008ff11), spawn "/home/carlos/.xmonad/Scripts/volctl down"  )
+    , ((0, 0x1008ff13), spawn "/home/carlos/.xmonad/Scripts/volctl up"    )
+    , ((0, 0x1008ff12), spawn "/home/carlos/.xmonad/Scripts/volctl toggle")
     -- Brightness Control
     , ((0, 0x1008ff03), spawn "xbacklight -dec 10")
     , ((0, 0x1008ff02), spawn "xbacklight -inc 10")
@@ -198,10 +198,10 @@ myLogHook h = dynamicLogWithPP $ defaultPP
       , ppTitle             =   (" " ++) . dzenColor "white" "#000000" . dzenEscape
       , ppOutput            =   hPutStrLn h
     }
-    where icon1 = "^i(/home/alex/.xmonad/dzen/icons/stlarch/tile.xbm)^ca()"
-          icon2 = "^i(/home/alex/.xmonad/dzen/icons/stlarch/monocle.xbm)^ca()"
-          icon3 = "^i(/home/alex/.xmonad/dzen/icons/stlarch/bstack.xbm)^ca()"
-          icon4 = "^i(/home/alex/.xmonad/dzen/icons/stlarch/monocle2.xbm)^ca()"
+    where icon1 = "^i(/home/carlos/.xmonad/dzen/icons/stlarch/tile.xbm)^ca()"
+          icon2 = "^i(/home/carlos/.xmonad/dzen/icons/stlarch/monocle.xbm)^ca()"
+          icon3 = "^i(/home/carlos/.xmonad/dzen/icons/stlarch/bstack.xbm)^ca()"
+          icon4 = "^i(/home/carlos/.xmonad/dzen/icons/stlarch/monocle2.xbm)^ca()"
 
 clickInLayout :: String
 clickInLayout = "^ca(1,xdotool key super+space)"
@@ -254,7 +254,7 @@ main = do
     d <- spawnPipe callDzen1
     spawn callDzen2
     xmonad $ defaultConfig {
-        terminal                  = "termite",
+        terminal                  = "terminator",
         focusFollowsMouse         = True,
         borderWidth               = 4,
         modMask                   = mod4Mask,

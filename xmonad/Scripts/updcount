@@ -10,5 +10,5 @@
 ICON="pacman.xbm"
 NUMBER=`pacman -Qu | wc -l`
 
-ICON='^i(/home/alex/.xmonad/dzen/icons/xbm8x8/'"$ICON)"
+ICON='^i(/home/carlos/.xmonad/dzen/icons/xbm8x8/'"$ICON)"
 echo "$ICON $NUMBER"

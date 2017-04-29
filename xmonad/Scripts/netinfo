@@ -18,5 +18,5 @@ else
     fi
 fi
 
-ICON='^i(/home/alex/.xmonad/dzen/icons/'"$ICON)"
+ICON='^i(/home/carlos/.xmonad/dzen/icons/'"$ICON)"
 echo "$ICON  $ESSID"

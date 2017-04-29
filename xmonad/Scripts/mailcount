@@ -11,5 +11,5 @@ MAILDIR="$HOME/.mail/gmail/Inbox/new"
 ICON="mail.xbm"
 NUMBER=`find $MAILDIR -type f | wc -l`
 
-ICON='^i(/home/alex/.xmonad/dzen/icons/xbm8x8/'"$ICON)"
+ICON='^i(/home/carlos/.xmonad/dzen/icons/xbm8x8/'"$ICON)"
 echo "$ICON $NUMBER"
